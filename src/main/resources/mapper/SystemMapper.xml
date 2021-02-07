@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.SystemMapper">
+	<!-- 用户端的查询 -->
+	<select id="findUserList" parameterType="java.util.Map" resultType="com.example.demo.dto.User">
+		select a.id AS id,
+			   a.avatar AS avatar,
+			   a.create_time AS createTime,
+			   a.email	AS email,
+			   a.nickname AS nickname,
+			   a.password AS password,
+			   a.type AS type,
+			   a.update_time AS updateTime,
+			   a.username AS username
+			   FROM t_user a
+		
+	</select>
+</mapper>
